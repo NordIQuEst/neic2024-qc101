@@ -17,10 +17,10 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "LESSON NAME"
-copyright = "2020, The contributors"
-author = "The contributors"
-github_user = "coderefinery"
+project = 'Quantum Computing 101'
+copyright = '2024, Nordiquest'
+author = 'Nordiquest'
+github_user = "NordIQuEst"
 github_repo_name = ""  # auto-detected from dirname if blank
 github_version = "main"
 conf_py_path = "/content/"  # with leading and trailing slash
@@ -39,11 +39,19 @@ extensions = [
 ]
 
 # Settings for myst_nb:
+myst_enable_extensions = ["dollarmath",
+                          "amsmath",
+                          "html_image",
+#                          "myst_dmath_double_inline"
+                          ]
+source_suffix = {".rst": "restructuredtext", ".ipynb": "myst-nb", ".myst": "myst-nb"}
+
+# Settings for myst_nb:
 # https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution
 # jupyter_execute_notebooks = "off"
 # jupyter_execute_notebooks = "auto"   # *only* execute if at least one output is missing.
 # jupyter_execute_notebooks = "force"
-jupyter_execute_notebooks = "cache"
+jupyter_execute_notebooks = "off"
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']
@@ -67,6 +75,9 @@ exclude_patterns = [
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
+html_logo = "_static/images/nq_logo2.png"
+html_favicon = "_static/images/favicon.png"
+html_static_path = ["_static"]
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -101,3 +112,33 @@ html_context = {
 #    #'matplotlib': ('https://matplotlib.org/', None),
 #    'seaborn': ('https://seaborn.pydata.org/', None),
 # }
+
+# add few new directives
+from sphinx_lesson.directives import _BaseCRDirective
+
+
+class SignatureDirective(_BaseCRDirective):
+    extra_classes = ["toggle-shown", "dropdown"]
+
+
+class ParametersDirective(_BaseCRDirective):
+    extra_classes = ["dropdown"]
+
+
+class TypealongDirective(_BaseCRDirective):
+    extra_classes = ["toggle-shown", "dropdown"]
+
+
+DIRECTIVES = [SignatureDirective, ParametersDirective, TypealongDirective]
+
+
+def setup(app):
+    for obj in DIRECTIVES:
+        app.add_directive(obj.cssname(), obj)
+
+
+import os
+if os.environ.get('GITHUB_REF', '') == 'refs/heads/main':
+    html_js_files = [
+        ('https://plausible.io/js/script.js', {"data-domain": "enccs.github.io/qas2023", "defer": "defer"}),
+    ]    
