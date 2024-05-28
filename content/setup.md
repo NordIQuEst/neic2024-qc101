@@ -29,7 +29,7 @@ $ conda create --name qc101 -y python=3.12 pip
 Which creates a new conda environment with Python 3.10 and `pip`. You can then activate it and install the python packages:
 
 ```console
-$ conda activate qas2023
+$ conda activate qc101
 $ pip install -r requirements.txt
 ```
 
@@ -38,6 +38,10 @@ You can download the `requirements.txt` [here](requirements.txt).
 
 ## [LUMI Web interface](https://lumi.csc.fi)
 
+1. Vist [lumi.csc.fi](https://lumi.csc.fi) and login using your select identity provider. For this workshop it will most likely be **MyAccessID**. 
+2. Select "Jupyter for Courses"
+3. Use `project_465001055` and select the reservation `nordiquest`. For the working directory use `/scratch/project_465001055`. 
+
 To begin with visit [lumi.csc.fi](https://lumi.csc.fi) and login using your select identity provider. For this workshop it will most likely be **MyAccessID**. 
 
-Project: project_465001055 
+![](_static/images/www-lumi.png)
