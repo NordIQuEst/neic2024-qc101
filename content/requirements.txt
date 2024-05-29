@@ -3,3 +3,4 @@ iqm-client==17.5
 qiskit[visualization]
 matplotlib
 pylatexenc
+qiskit-algorithms
