@@ -35,6 +35,10 @@ $ pip install -r requirements.txt
 
 You can download the `requirements.txt` [here](requirements.txt).
 
+```{exercise} Download notebooks
+
+[Download notebooks here](https://a3s.fi/NeIC-AH2024-Quantum/notebooks.zip)
+```
 
 ## [LUMI Web interface](https://lumi.csc.fi)
 
