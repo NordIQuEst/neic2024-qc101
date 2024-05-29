@@ -26,3 +26,4 @@ This will be followed by an introduction into a hybrid quantum-classical algorit
    :caption: Notebooks
 
    notebooks/introduction-to-using-a-qc.ipynb
+   notebooks/introduction-to-using-a-qc-2.ipynb
