@@ -40,12 +40,12 @@ You can download the `requirements.txt` [here](requirements.txt).
 [Download notebooks here](https://a3s.fi/NeIC-AH2024-Quantum/notebooks.zip)
 ```
 
-## [LUMI Web interface](https://lumi.csc.fi)
+## [LUMI Web interface](https://www.lumi.csc.fi)
 
-1. Vist [lumi.csc.fi](https://lumi.csc.fi) and login using your select identity provider. For this workshop it will most likely be **MyAccessID**. 
+1. Vist [lumi.csc.fi](https://www.lumi.csc.fi) and login using your select identity provider. For this workshop it will most likely be **MyAccessID**. 
 2. Select "Jupyter for Courses"
 3. Use `project_465001055` and select the reservation `nordiquest`. For the working directory use `/scratch/project_465001055`. 
 
-To begin with visit [lumi.csc.fi](https://lumi.csc.fi) and login using your select identity provider. For this workshop it will most likely be **MyAccessID**. 
+To begin with visit [lumi.csc.fi](https://www.lumi.csc.fi) and login using your select identity provider. For this workshop it will most likely be **MyAccessID**. 
 
 ![](_static/images/www-lumi.png)
